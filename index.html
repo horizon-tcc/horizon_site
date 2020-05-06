@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Horizon</title>
+		<link rel="stylesheet" href="./src/css/geral.css" />
+		<link rel="stylesheet" href="./src/css/parte.css" />
+		<link rel="stylesheet" href="./src/css/sections/section1.css" />
+		<link rel="stylesheet" href="./src/css/sections/section2.css" />
+		<link rel="stylesheet" href="./src/css/sections/section3.css" />
+	</head>
+	<body>
+		<section id="section1" class="parte section1">
+			<div style="flex: 3;"></div>
+			<div style="flex: 2;">
+				<img
+					src="./src/img/logos/logo-branca.png"
+					alt="Logo Horizon"
+					class="logo-horizon"
+				/>
+			</div>
+			<div class="seta" style="flex: 2;">
+				<a href="#section2">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						class="tam-seta"
+						viewBox="0 0 60 40.902"
+					>
+						<g
+							id="Grupo_32"
+							data-name="Grupo 32"
+							transform="translate(-930 -922.848)"
+						>
+							<path
+								id="iconfinder_basics-05_296830"
+								d="M52.876,19.1,29.7,49.1l23.176,30,.726-1.5L31.636,49.1,53.6,20.6Z"
+								transform="translate(910.9 976.45) rotate(-90)"
+								fill="#fff"
+							/>
+							<path
+								id="iconfinder_basics-05_296830-2"
+								data-name="iconfinder_basics-05_296830"
+								d="M50.948,19.1,29.7,46.6l21.248,27.5.666-1.375L31.475,46.6,51.614,20.475Z"
+								transform="translate(913.396 993.45) rotate(-90)"
+								fill="#fff"
+							/>
+						</g>
+					</svg>
+				</a>
+			</div>
+		</section>
+
+		<section id="section2" class="parte section2">
+			<div style="flex: 2;"></div>
+			<div style="flex: 2;">
+				<div><img src="./src/img/ilustracao1.jpg" alt="" /></div>
+				<div class="quem-somos">
+					<h1>O que é a Horizon</h1>
+					<p>
+						A Horizon é uma empresa de serviços de TI criada
+						para possibilitar que os clientes utilizem a
+						tecnologia a favor de seus negócios. Desde 2019, a
+						empresa presta serviços e entrega soluções que
+						proporcionam aos clientes desempenho e
+						tranquilidade.
+					</p>
+				</div>
+			</div>
+			<div class="seta flex" style="flex: 2;">
+				<a href="#section3">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						class="tam-seta"
+						viewBox="0 0 60 40.902"
+					>
+						<g
+							id="Grupo_32"
+							data-name="Grupo 32"
+							transform="translate(-930 -922.848)"
+						>
+							<path
+								id="iconfinder_basics-05_296830"
+								d="M52.876,19.1,29.7,49.1l23.176,30,.726-1.5L31.636,49.1,53.6,20.6Z"
+								transform="translate(910.9 976.45) rotate(-90)"
+								fill="rgb(31, 31, 31)"
+							/>
+							<path
+								id="iconfinder_basics-05_296830-2"
+								data-name="iconfinder_basics-05_296830"
+								d="M50.948,19.1,29.7,46.6l21.248,27.5.666-1.375L31.475,46.6,51.614,20.475Z"
+								transform="translate(913.396 993.45) rotate(-90)"
+								fill="rgb(31, 31, 31)"
+							/>
+						</g>
+					</svg>
+				</a>
+			</div>
+		</section>
+
+		<section id="section3" class="parte section3">
+			<div class="formulario">
+				<h1>Fale conosco</h1>
+				<form action="POST">
+					<input
+						type="text"
+						name="nome"
+						id="nome"
+						placeholder="Nome"
+						required
+					/>
+					<input
+						type="email"
+						name="email"
+						id="email"
+						placeholder="E-mail"
+						required
+					/>
+					<input
+						type="text"
+						name="assunto"
+						id="assunto"
+						placeholder="Assunto"
+						required
+					/>
+					<textarea
+						name="mensagem"
+						id="mensagem"
+						cols="30"
+						rows="10"
+						placeholder="Mensagem"
+						required
+					></textarea>
+					<input
+						type="submit"
+						value="ENVIAR"
+						onclick="enviarEmail()"
+					/>
+				</form>
+			</div>
+			<div>
+				<img
+					class="ilustracao"
+					src="./src/img/ilustracao2.jpg"
+					alt=""
+				/>
+			</div>
+		</section>
+
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<script>
+			enviarEmail = () => {
+				const email = `
+				<h1>${document.getElementById("assunto").value}</h1>
+				<br>
+				<h4>Nome: </h4> ${document.getElementById("nome").value}
+				<br>
+				<h4>Email: </h4> ${document.getElementById("email").value}
+				<h4>Mensagem:</h4>
+				<br>
+				${document.getElementById("mensagem").value}
+				`;
+
+				axios({
+					method: "POST",
+					url: "http://needy-api.herokuapp.com/login",
+					data: {
+						email: "teste@teste.com",
+						senha: "teste",
+					},
+				}).then((res) => {
+					console.log(res.data.token);
+					axios({
+						method: "POST",
+						url: "http://needy-api.herokuapp.com/sendmail",
+						data: {
+							to: "gatodobairo@gmail.com",
+							subject: document.getElementById("assunto")
+								.value,
+							text: email,
+						},
+						headers: {
+							Authorization: `Bearer ${res.data.token}`,
+						},
+					}).then((res) => {
+						console.log(res);
+					});
+				});
+			};
+
+			// console.log(
+			// 	"EMAIL: " + document.getElementById("email").value
+			// );
+
+			// axios.post("https://needy-api.herokuapp.com/login", {
+			// 	email: "teste@teste.com",
+			// 	senha: "teste",
+			// })
+			// 	.then(function (response) {
+			// 		axios.post(
+			// 			"http://needy-api.herokuapp.com/sendmail",
+			// 			{
+			// 				headers: {
+			// 					Authorization: `Bearer ${response.token}`,
+			// 				},
+			// 				data: {
+			// 					to: "gatodobairo@gmail.com",
+			// 					subject: document.getElementById(
+			// 						"assunto"
+			// 					).value,
+			// 					text: email,
+			// 				},
+			// 			}
+			// 		);
+			// 	})
+			// 	.catch(function (error) {
+			// 		console.log(error);
+			// 	});
+		</script>
+	</body>
+</html>

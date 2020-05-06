@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+
+.section2 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.section2 div:nth-child(2) {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.quem-somos {
+	display: flex;
+	flex-direction: column !important;
+	width: 33em;
+}
+
+.quem-somos h1 {
+	font-family: "Roboto", sans-serif;
+	font-weight: 700;
+	font-size: 50px;
+	margin-bottom: 20px;
+	color: rgb(31, 31, 31);
+}
+
+.quem-somos p {
+	font-family: "Roboto", sans-serif;
+	font-weight: 400;
+	font-size: 20px;
+	color: rgb(31, 31, 31);
+}
