@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+
+.section4 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.tituloS4 {
+	text-align: center;
+	margin: 20px 0px;
+	font-family: "Roboto", sans-serif;
+	font-weight: 700;
+	color: rgb(41, 41, 41);
+	font-size: 50px;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+}
+
+.container-devs {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.dev {
+	text-align: center;
+	margin: 20px 40px;
+	width: 250px;
+}
+.dev img {
+	border-radius: 100%;
+	width: 150px;
+}
+
+.dev h2 {
+	font-family: "Roboto", sans-serif;
+	font-weight: 700;
+	color: rgb(41, 41, 41);
+}
+
+.dev p {
+	font-family: "Roboto", sans-serif;
+	font-weight: 400;
+	color: rgb(66, 63, 63);
+}
+
+@media screen and (max-width: 800px) {
+	.section4 {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		height: 120em;
+	}
+
+	.tituloS4 {
+		text-align: center;
+		margin: 20px 0px;
+		font-family: "Roboto", sans-serif;
+		font-weight: 700;
+		color: rgb(41, 41, 41);
+		font-size: 50px;
+	}
+
+	.container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.container-devs {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.dev {
+		text-align: center;
+		margin: 20px 40px;
+		width: 250px;
+	}
+	.dev img {
+		border-radius: 100%;
+		width: 150px;
+	}
+
+	.dev h2 {
+		font-family: "Roboto", sans-serif;
+		font-weight: 700;
+		color: rgb(41, 41, 41);
+	}
+
+	.dev p {
+		font-family: "Roboto", sans-serif;
+		font-weight: 400;
+		color: rgb(66, 63, 63);
+	}
+}

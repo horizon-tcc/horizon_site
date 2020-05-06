@@ -1,26 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
 
-.section2 {
+.section3 {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 	justify-content: center;
+	align-items: center;
 }
 
-.section2 div:nth-child(2) {
+.containerS3 {
+	width: 100%;
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
+	align-items: center;
+	justify-content: space-around;
+	flex: 4;
 }
 
-.quem-somos {
-	display: flex;
-	flex-direction: column !important;
-	width: 33em;
+.descricao {
+	width: 20em;
 }
 
-.quem-somos h1 {
+.descricao h1 {
 	font-family: "Roboto", sans-serif;
 	font-weight: 700;
 	font-size: 50px;
@@ -28,53 +29,48 @@
 	color: rgb(31, 31, 31);
 }
 
-.quem-somos p {
+.descricao p {
 	font-family: "Roboto", sans-serif;
 	font-weight: 400;
-	font-size: 20px;
+	font-size: 17px;
 	color: rgb(107, 107, 107);
 }
 
 @media screen and (max-width: 800px) {
-	.section2 {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-	}
-
-	.section2 div:nth-child(2) {
+	.section3 {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 	}
 
-	.ilu-1 {
-		width: 21em;
+	.containerS3 {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		flex: 4;
 	}
 
-	.quem-somos {
-		display: flex;
-		flex-direction: column !important;
+	.descricao {
 		width: 20em;
+		text-align: center;
 	}
 
-	.quem-somos h1 {
+	.descricao h1 {
 		font-family: "Roboto", sans-serif;
 		font-weight: 700;
-		font-size: 36px;
+		font-size: 50px;
 		margin-bottom: 20px;
 		color: rgb(31, 31, 31);
 	}
 
-	.quem-somos p {
-		margin-bottom: 10px;
+	.descricao p {
 		font-family: "Roboto", sans-serif;
 		font-weight: 400;
 		font-size: 17px;
-		text-align: center;
-		width: 18em;
 		color: rgb(107, 107, 107);
+		margin-bottom: 10px;
 	}
 }

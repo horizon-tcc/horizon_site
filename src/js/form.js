@@ -20,9 +20,11 @@ form.addEventListener("submit", function (e) {
 			method: "POST",
 			url: "http://needy-api.herokuapp.com/sendmail",
 			data: {
-				to: "gatodobairo@gmail.com",
-				subject: assunto,
-				text: mensagem,
+				para: "needyhorizon@gmail.com",
+				assunto: assunto,
+				texto: mensagem,
+				remetenteEmail: email,
+				remetenteNome: nome,
 			},
 			headers: {
 				Authorization: `Bearer ${res.data.token}`,
@@ -31,6 +33,11 @@ form.addEventListener("submit", function (e) {
 			console.log(res);
 		});
 	});
+
+	document.getElementById("nome").value = "";
+	document.getElementById("email").value = "";
+	document.getElementById("assunto").value = "";
+	document.getElementById("mensagem").value = "";
 
 	// impede o envio do form
 	e.preventDefault();

@@ -11,8 +11,15 @@
 		<link rel="stylesheet" href="./src/css/parte.css" />
 		<link rel="stylesheet" href="./src/css/sections/section1.css" />
 		<link rel="stylesheet" href="./src/css/sections/section2.css" />
+		<link rel="stylesheet" href="./src/css/sections/section3.css" />
+		<link rel="stylesheet" href="./src/css/sections/section4.css" />
 		<link rel="stylesheet" href="./src/css/sections/section5.css" />
 		<link rel="stylesheet" href="./src/css/sections/section6.css" />
+
+		<script
+			src="https://kit.fontawesome.com/4d91328770.js"
+			crossorigin="anonymous"
+		></script>
 	</head>
 	<body>
 		<section id="section1" class="parte section1">
@@ -58,7 +65,13 @@
 		<section id="section2" class="parte section2">
 			<div style="flex: 2;"></div>
 			<div style="flex: 2;">
-				<div><img src="./src/img/ilustracao1.jpg" alt="" /></div>
+				<div>
+					<img
+						class="ilu-1"
+						src="./src/img/ilustracao/ilustracao1.jpg"
+						alt=""
+					/>
+				</div>
 				<div class="quem-somos">
 					<h1>O que é a Horizon</h1>
 					<p>
@@ -102,14 +115,53 @@
 			</div>
 		</section>
 
-		<section id="section3" class="parte setion3"></section>
+		<section id="section3" class="parte section3">
+			<div class="containerS3">
+				<div id="imagemProjeto"></div>
+				<div class="descricao">
+					<h1 id="tituloProjeto"></h1>
+					<p id="descricaoProjeto"></p>
+				</div>
+				<div id="setaProduto"></div>
+			</div>
+			<div class="seta flex" style="flex: 2;">
+				<a href="#section4">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						class="tam-seta"
+						viewBox="0 0 60 40.902"
+					>
+						<g
+							id="Grupo_32"
+							data-name="Grupo 32"
+							transform="translate(-930 -922.848)"
+						>
+							<path
+								id="iconfinder_basics-05_296830"
+								d="M52.876,19.1,29.7,49.1l23.176,30,.726-1.5L31.636,49.1,53.6,20.6Z"
+								transform="translate(910.9 976.45) rotate(-90)"
+								fill="rgb(31, 31, 31)"
+							/>
+							<path
+								id="iconfinder_basics-05_296830-2"
+								data-name="iconfinder_basics-05_296830"
+								d="M50.948,19.1,29.7,46.6l21.248,27.5.666-1.375L31.475,46.6,51.614,20.475Z"
+								transform="translate(913.396 993.45) rotate(-90)"
+								fill="rgb(31, 31, 31)"
+							/>
+						</g>
+					</svg>
+				</a>
+			</div>
+		</section>
 
-		<section id="section4" class="parte setion4">
-			<!-- <div>
+		<section id="section4" class="parte section4">
+			<h1 class="tituloS4">Equipe</h1>
+			<div class="container-devs">
 				<div class="dev">
 					<img src="./src/img/desenvolvedores/alan.jpg" alt="" />
 					<h2>Alan Julian</h2>
-					<p>Atendimento</p>
+					<p>Analista</p>
 				</div>
 				<div class="dev">
 					<img
@@ -132,21 +184,15 @@
 					<h2>Gustavo Manocchio</h2>
 					<p>Desenvolvedor Mobile</p>
 				</div>
-				<div class="dev">
-					<img
-						src="./src/img/desenvolvedores/miguel.jpg"
-						alt=""
-					/>
-					<h2>Miguel Riquelme</h2>
-					<p>Desenvolvedor Front-End</p>
-				</div>
+			</div>
+			<div class="container-devs">
 				<div class="dev">
 					<img
 						src="./src/img/desenvolvedores/nunes.jpg"
 						alt=""
 					/>
 					<h2>Gustavo Nunes</h2>
-					<p>CEO</p>
+					<p>Gerente de Projetos</p>
 				</div>
 				<div class="dev">
 					<img
@@ -156,7 +202,44 @@
 					<h2>Tabata Fernanda</h2>
 					<p>Designer</p>
 				</div>
-			</div> -->
+				<div class="dev">
+					<img
+						src="./src/img/desenvolvedores/miguel.jpg"
+						alt=""
+					/>
+					<h2>Miguel Riquelme</h2>
+					<p>Desenvolvedor Front-End</p>
+				</div>
+			</div>
+			<div class="seta flex" style="flex: 2;">
+				<a href="#section5">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						class="tam-seta"
+						viewBox="0 0 60 40.902"
+					>
+						<g
+							id="Grupo_32"
+							data-name="Grupo 32"
+							transform="translate(-930 -922.848)"
+						>
+							<path
+								id="iconfinder_basics-05_296830"
+								d="M52.876,19.1,29.7,49.1l23.176,30,.726-1.5L31.636,49.1,53.6,20.6Z"
+								transform="translate(910.9 976.45) rotate(-90)"
+								fill="rgb(31, 31, 31)"
+							/>
+							<path
+								id="iconfinder_basics-05_296830-2"
+								data-name="iconfinder_basics-05_296830"
+								d="M50.948,19.1,29.7,46.6l21.248,27.5.666-1.375L31.475,46.6,51.614,20.475Z"
+								transform="translate(913.396 993.45) rotate(-90)"
+								fill="rgb(31, 31, 31)"
+							/>
+						</g>
+					</svg>
+				</a>
+			</div>
 		</section>
 
 		<section id="section5" class="parte section5">
@@ -193,19 +276,21 @@
 							placeholder="Mensagem"
 							required
 						></textarea>
-						<button type="submit">ENVIAR</button>
+						<a href="#modal-form" rel="modal:open"
+							><button type="submit">ENVIAR</button>
+						</a>
 					</form>
 				</div>
 				<div>
 					<img
-						class="ilustracao"
-						src="./src/img/ilustracao2.jpg"
+						class="ilustracao ilu-3"
+						src="./src/img/ilustracao/ilustracao2.jpg"
 						alt=""
 					/>
 				</div>
 			</div>
 			<div class="seta flex" style="flex: 2;">
-				<a href="#section3">
+				<a href="#section6">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						class="tam-seta"
@@ -235,8 +320,58 @@
 			</div>
 		</section>
 
-		<section id="section6" class="parte section6"></section>
+		<section id="section6" class="parte section6">
+			<div class="flex"></div>
+			<div class="container-redes">
+				<div class="redes-sociais">
+					<a href="" target="_blank">
+						<i class="fab fa-facebook"></i>
+					</a>
+				</div>
+				<div class="redes-sociais">
+					<a href="needyhorizon@gmail.com" target="_blank">
+						<i class="fas fa-envelope-open-text"></i>
+					</a>
+				</div>
+				<div class="redes-sociais">
+					<a
+						href="https://github.com/horizon-tcc/"
+						target="_blank"
+					>
+						<i class="fab fa-github"></i>
+					</a>
+				</div>
+				<div class="redes-sociais">
+					<a href="" target="_blank">
+						<i class="fab fa-linkedin-in"></i>
+					</a>
+				</div>
+			</div>
+			<div class="flex"></div>
+			<div class="copyright flex">
+				<a href="#section1">
+					<img
+						src="./src/img/logos/logo-branca.png"
+						alt="logo branca"
+					/>
+				</a>
+			</div>
+		</section>
 
+		<div id="modal-form" class="modal modalzao">
+			<p style="font-family: Arial, Helvetica, sans-serif;">
+				Dados enviados com sucesso! Em breve nossa equipe retornará
+				contado, obrigado :)
+			</p>
+		</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"
+		/>
+		<script src="./src/js/projetos.js"></script>
 		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 		<script src="./src/js/form.js"></script>
 	</body>
