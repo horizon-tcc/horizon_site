@@ -11,7 +11,8 @@
 		<link rel="stylesheet" href="./src/css/parte.css" />
 		<link rel="stylesheet" href="./src/css/sections/section1.css" />
 		<link rel="stylesheet" href="./src/css/sections/section2.css" />
-		<link rel="stylesheet" href="./src/css/sections/section3.css" />
+		<link rel="stylesheet" href="./src/css/sections/section5.css" />
+		<link rel="stylesheet" href="./src/css/sections/section6.css" />
 	</head>
 	<body>
 		<section id="section1" class="parte section1">
@@ -101,55 +102,82 @@
 			</div>
 		</section>
 
-		<section id="section3" class="parte section3">
-			<div class="formulario">
-				<h1>Fale conosco</h1>
-				<form action="POST">
-					<input
-						type="text"
-						name="nome"
-						id="nome"
-						placeholder="Nome"
-						required
-					/>
-					<input
-						type="email"
-						name="email"
-						id="email"
-						placeholder="E-mail"
-						required
-					/>
-					<input
-						type="text"
-						name="assunto"
-						id="assunto"
-						placeholder="Assunto"
-						required
-					/>
-					<textarea
-						name="mensagem"
-						id="mensagem"
-						cols="30"
-						rows="10"
-						placeholder="Mensagem"
-						required
-					></textarea>
-					<input
-						type="submit"
-						value="ENVIAR"
-						onclick="enviarEmail()"
-					/>
-				</form>
-			</div>
+		<section id="section5" class="parte section5">
 			<div>
-				<img
-					class="ilustracao"
-					src="./src/img/ilustracao2.jpg"
-					alt=""
-				/>
+				<div class="formulario">
+					<h1>Fale conosco</h1>
+					<form>
+						<input
+							type="text"
+							name="nome"
+							id="nome"
+							placeholder="Nome"
+							required
+						/>
+						<input
+							type="email"
+							name="email"
+							id="email"
+							placeholder="E-mail"
+							required
+						/>
+						<input
+							type="text"
+							name="assunto"
+							id="assunto"
+							placeholder="Assunto"
+							required
+						/>
+						<textarea
+							name="mensagem"
+							id="mensagem"
+							cols="30"
+							rows="10"
+							placeholder="Mensagem"
+							required
+						></textarea>
+						<button onclick="enviarEmail()">ENVIAR</button>
+					</form>
+				</div>
+				<div>
+					<img
+						class="ilustracao"
+						src="./src/img/ilustracao2.jpg"
+						alt=""
+					/>
+				</div>
+			</div>
+			<div class="seta flex" style="flex: 2;">
+				<a href="#section3">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						class="tam-seta"
+						viewBox="0 0 60 40.902"
+					>
+						<g
+							id="Grupo_32"
+							data-name="Grupo 32"
+							transform="translate(-930 -922.848)"
+						>
+							<path
+								id="iconfinder_basics-05_296830"
+								d="M52.876,19.1,29.7,49.1l23.176,30,.726-1.5L31.636,49.1,53.6,20.6Z"
+								transform="translate(910.9 976.45) rotate(-90)"
+								fill="rgb(31, 31, 31)"
+							/>
+							<path
+								id="iconfinder_basics-05_296830-2"
+								data-name="iconfinder_basics-05_296830"
+								d="M50.948,19.1,29.7,46.6l21.248,27.5.666-1.375L31.475,46.6,51.614,20.475Z"
+								transform="translate(913.396 993.45) rotate(-90)"
+								fill="rgb(31, 31, 31)"
+							/>
+						</g>
+					</svg>
+				</a>
 			</div>
 		</section>
-
+		<section id="section6" class="parte section6"></section>
 		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 		<script src="./src/js/form.js"></script>
 	</body>

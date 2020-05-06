@@ -3,6 +3,8 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	display: flex;
+	background-attachment: fixed;
+
 	justify-content: center;
 	flex-direction: column;
 	align-items: center;
