@@ -20,9 +20,9 @@ form.addEventListener("submit", function (e) {
 			method: "POST",
 			url: "http://needy-api.herokuapp.com/sendmail",
 			data: {
-				para: "needyhorizon@gmail.com",
+				destinatario: "needyhorizon@gmail.com",
 				assunto: assunto,
-				texto: mensagem,
+				mensagem: mensagem,
 				remetenteEmail: email,
 				remetenteNome: nome,
 			},
